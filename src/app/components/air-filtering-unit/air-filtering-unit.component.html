@@ -1,0 +1,31 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div id="cardContainer">
+  <h1>Air Filtering Unit</h1>
+      <div id="tierOne" class="reqList" *ngIf="level === 1">
+        <div id="cardControls">
+          <button mat-button id="cardButton" (click)="levelDown()"><mat-icon>trending_down</mat-icon></button>
+          <h2>Level 1</h2>
+          <button mat-button id="cardButton" (click)="levelUp()"><mat-icon>trending_up</mat-icon></button>
+        </div>
+        <ul *ngIf="levelOne.itemReq.length > 0">
+          <h3>Item Requirements</h3>
+          <li *ngFor="let item of levelOne.itemReq">
+            {{item.type}} : {{item.amount}}
+          </li>
+        </ul>
+        <ul *ngIf="levelOne.traderReq.length > 0">
+          <h3>Trader Requirements</h3>
+            <li *ngFor="let trader of levelOne.traderReq">{{trader.trader}} : {{trader.level}}</li>
+        </ul>
+        <ul *ngIf="levelOne.skillReq.length > 0">
+          <h3>Skill Requirements</h3>
+          <li *ngFor="let skill of levelOne.skillReq">{{skill.skill}} : {{skill.level}}</li>
+        </ul>
+        <ul *ngIf="levelOne.hideoutReq.length > 0">
+          <h3>Hideout Requirements</h3>
+          <li *ngFor="let component of levelOne.hideoutReq">{{component.component}} : {{component.level}}</li>
+        </ul>
+      </div>
+      <h3 *ngIf="level === maxLevel" id="maxTag">Max level</h3>
+</div>

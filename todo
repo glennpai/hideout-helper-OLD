@@ -1,0 +1,9 @@
+Make the min / max greyed out when min'd or max'd
+    [ngStyle]="{'background-color': (level === maxLevel) ? '#73c7af' : '#ffffff'}"
+
+finish entering data
+
+make icon for tab
+
+less eyefucky colors
+
