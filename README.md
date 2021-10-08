@@ -1,6 +1,7 @@
 # Hideout Helper
 
 Author: Christopher Glenn
+
 Contact: chglenn20@gmail.com
 
 This project is a tool to help players of the popular video game Escape From Tarkov keep track of materials needed to upgrade their hideout. 
